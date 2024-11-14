@@ -35,6 +35,6 @@ toc: true
 
 
 
-## 기술 스킬셋
+## 기술 스킬
 language : Javascript(TypeScript)  
 framework : React, React-Native, Vue 
