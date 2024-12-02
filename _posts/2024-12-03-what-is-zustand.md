@@ -35,7 +35,7 @@ const { state, action } = useCountStore((state) => {
 
 그리고 나온 결과가, 바로 이글을 쓰게 된 계기였다. 화면은 max call stack size exceeded 에러를 뱉으며 죽어버렸다.
 
-처음에는 원인을 파악하지 못하고 어디서 호출을 잘못하나를 한참 찾아보다가, gpt의 도움으로 useStore에 지정된 콜백 ‘state => { state, action }’ 는 항상 새로운 객체를 반환하며 이로 인해 불필요한 렌더링을 유발함을 파악할 수 있었다. (결론을 조금 더하자면 `useSyncExternalStore` 내부에서 [`Object.is`](http://Object.is) 비교가 수행되며 다른 state로 인식되기 때문이다.)
+처음에는 원인을 파악하지 못하고 어디서 호출을 잘못하나를 한참 찾아보다가, gpt의 도움으로 useStore에 지정된 콜백 ‘state => { state, action }’ 는 항상 새로운 객체를 반환하며 이로 인해 불필요한 렌더링을 유발함을 파악할 수 있었다. (결론을 조금 더하자면 `useSyncExternalStore` 내부에서 `Object.is`비교가 수행되며 다른 state로 인식되기 때문이다.)
 
 그래서,
 
