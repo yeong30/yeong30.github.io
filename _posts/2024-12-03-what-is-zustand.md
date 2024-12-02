@@ -1,8 +1,8 @@
 ---
 title: "zustand 뜯어보기"
-date: 2024-12-03 20:00:00 +0900
+date: 2024-12-03 00:00:00 +0900
 categories: [React]
-tags: [React, zustand를]
+tags: [React, zustand]
 ---
 
 이번 토이 프로젝트를 진행하며 zustand를 처음 사용해보고 있는 중이다.
